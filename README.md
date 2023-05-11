@@ -144,6 +144,3 @@ I would like to appreciate [Microverse](https://www.microverse.org/) for providi
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
