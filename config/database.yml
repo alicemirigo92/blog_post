@@ -58,6 +58,8 @@ development:
 test:
   <<: *default
   database: blog_test
+  port: 5432
+  host: localhost
   username: postgres
   password: 12345
 # As with config/credentials.yml, you never want to store sensitive information,
