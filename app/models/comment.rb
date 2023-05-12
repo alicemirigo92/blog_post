@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :post, counter_cache: :commentscounter
   after_save :update_comments_counter
 
-   private
+  private
 
   def update_comments_counter
     post.increment!(:commentscounter)
