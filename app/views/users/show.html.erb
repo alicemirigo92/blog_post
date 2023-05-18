@@ -7,7 +7,7 @@
 </div>
 
 <div class="user_post">
-   <% @user.most_three_recent_post.each do |post| %>
+   <% @user.most_recent_posts.each do |post| %>
       <%= render 'shared/post', post:post %>
    <%end%>
 
