@@ -1,14 +1,12 @@
-<div class="user_card">
-  <div class="user_card_image">
-    <% if user.present? && user.photo.present? %>
-      <img class="image-placeholder" src="<%= user.photo %>" alt="add-image"/>
-    <% else %>
-      <!-- Provide a default image or alternative content -->
-    <% end %>
-  </div>
-  <div class="user_card_detail">
-    <% if user.present? %>
-      <h2><%= link_to user.name, user %></h2>
-    <% end %>
-  </div>
+<div class= "user">
+ <div class="user_card">
+<div class="user_card_image">
+<img class="image-placeholder"src="<%= user.photo %>" alt="add-image"/>
 </div>
+ <div class="user_card_detail">
+<h2><%= link_to user.name, user %></h2>
+<p>Number of posts: <%= user.postscounter %></p>
+</div>
+</div>
+</div>
+
