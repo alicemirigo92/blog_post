@@ -1,4 +1,3 @@
-<h1>A given User detail with posts</h1>
 <%= render 'shared/user', user:@user%>
 
 <div class="user_bio">
@@ -14,6 +13,8 @@
 </div>
 <div class="button_holder">
 <button>
+<%= link_to 'Create new post', new_user_post_path(@user)%>
+</button>
  <%= link_to 'See all posts', "#{@user.id}/posts" %>
 </button>
 <button>
