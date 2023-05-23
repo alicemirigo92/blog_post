@@ -10,7 +10,6 @@
 
 #     Comment.create(text: 'Hi John!', author_id: @user.id, post_id: @first_post.id)
 #     Comment.create(text: 'How are you?', author_id: @user.id, post_id: @first_post.id)
-#     Comment.create(text: 'You know Rails', author_id: @user.id, post_id: @first_post.id)
 
 #     visit user_posts_path(@user)
 #   end
@@ -49,11 +48,11 @@
 #   end
 
 #   scenario 'display the first comment on a post' do
-#     expect(page).to have_content('Hi Tom!')
+#     expect(page).to have_content('Hi John!')
 #   end
 
 #   scenario 'display the how many comments' do
-#     expect(page).to have_content(/comments: 3/i)
+#     expect(page).to have_content(/comments: 2/i)
 #   end
 
 #   scenario 'display the how many Likes' do

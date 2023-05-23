@@ -1,4 +1,4 @@
-<h1>list of posts for a given user </h1>
+<h1>list of posts for a given user is <%= @posts.count %></h1>
  <div class="post_list">
    <% @posts.includes(:comments).each do |post| %>
 
