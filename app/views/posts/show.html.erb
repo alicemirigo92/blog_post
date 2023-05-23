@@ -11,16 +11,11 @@
     <p><%=@post.text%></p>
   </div>
     </div>
-    <% if  !@post.comments.empty?%>
-  <div class="post_detail_comment">
-  <% if @post.comments.present? %>
-    <% @post.comments.each do |comment| %>
-      <%= render 'shared/comment', comment: comment %>
-    <% end %>
-  <% end %>
-</div>
-
-    <%end%>
+    <div class ="post_detail_comment">
+     <% @post.comments.each do |comment| %>
+       <%= render 'shared/comment', comment:comment %>
+       <% end %>
+  </div>
     <div class="comment_like_holder">
 
      <div class= "comment_form_holder">
