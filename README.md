@@ -99,6 +99,11 @@ To run the project, execute the following command:
 - Twitter: [@Gathonimirigo](https://twitter.com/GathoniMirigo)
 - LinkedIn: [Alice](www.linkedin.com/in/alice-mirigo)
 
+Riyaz Ahmed
+
+- GitHub: [Riyaz Ahmed](https://github.com/r-ahmed2022)
+- LinkedIn: [Riyaz Ahmed](https://www.linkedin.com/in/riyazahmedmicroverse/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
