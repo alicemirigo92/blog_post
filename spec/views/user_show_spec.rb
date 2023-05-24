@@ -5,10 +5,10 @@ RSpec.describe 'renders users Show Page', type: :feature do
     @user = User.create(name: 'Symo', photo: 'https://media.gettyimages.com/id/1278139568/nl/foto/studioportret-van-20-jaar-oude-vrouw.jpg?s=612x612&w=0&k=20&c=3Bd4Ot79Z1ZKoCwAl0qFQ9hoBrQTar4SqtPefHOBEkg=',
                         bio: 'This is my brother.', postscounter: 5)
 
-    Post.create(author: @user, title: 'Hello there', text: 'This is my first post')
-    Post.create(author: @user, title: 'Hello microverse', text: 'This is my second post')
+    @post1 = Post.create(author: @user, title: 'Hello there', text: 'This is my first post')
+    @post2 = Post.create(author: @user, title: 'Hello microverse', text: 'This is my second post')
     Post.create(author: @user, title: 'Hello Rails', text: 'This is my third post')
-    @post = Post.create(author: @user, title: 'Hello Ruby', text: 'This is my fourth post')
+    @post4 = Post.create(author: @user, title: 'Hello Ruby', text: 'This is my fourth post')
 
     visit user_path(id: @user.id)
   end
@@ -45,12 +45,10 @@ RSpec.describe 'renders users Show Page', type: :feature do
     expect(page).to have_link('See all posts')
   end
 
-  # it 'should render three recent posts' do
-  #   expect(page).to have_content(@user.most_recent_posts[0])
-  #   expect(page).to have_content(@user.most_recent_posts[1])
-  #   expect(page).to have_content(@user.most_recent_posts[2])
-  #   expect(page).to have_no_content(Post.where(author: @user))
-  # end
+  it 'should render three recent posts' do
+    expect(page).to have_no_content(@post1.text)
+    expect(page).to have_content(@post4.text)
+  end
 
   it 'renders the user post index page' do
     click_link('See all posts')
