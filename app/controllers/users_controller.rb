@@ -15,8 +15,8 @@ class UsersController < ApplicationController
   private
 
   def sign_out_and_redirect
-    sign_out current_user
-    redirect_to new_user_session_path
+  sign_out current_user
+   redirect_to new_user_session_path
   end
 
   def find_user
