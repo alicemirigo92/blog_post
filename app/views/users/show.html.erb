@@ -8,7 +8,7 @@
 </div>
 
 <div class="user_post">
-   <% @user.most_recent_posts.each do |post| %>
+   <% @user.most_three_recent_post.each do |post| %>
 
       <%= render 'shared/post', post:post %>
    <%end%>
@@ -16,9 +16,7 @@
 </div>
 <div class="button_holder">
 
-<button>
-<%= link_to 'Create new post', new_user_post_path(@user)%>
-</button>
+
 
 <button>
  <%= link_to 'See all posts', user_posts_path(@user,@posts) %>
