@@ -53,6 +53,16 @@ button > a {
   color: #000;
 }
 
+.new-user > a {
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ccc;
+  box-shadow: 0 10px 10px #1c1c1c1c;
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
 .user_card_detail > h2 > a {
   font-size: 30px;
   padding-left: 15px;
@@ -327,17 +337,7 @@ button:hover {
 }
 
 .new-user {
- align-self: flex-end;
-}
-
-.new-user > a {
-   font-size: 1.5rem;
-   display: inline-block;
-   padding: .5rem 1rem;
-   background-color: #ccc;
-   box-shadow: 0px 10px 10px #1c1c1c1c;
-   text-decoration: none;
-   color: #1c1c1c;
+  align-self: flex-end;
 }
 
 .user_holder > h2 {
