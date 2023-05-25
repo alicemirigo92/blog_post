@@ -53,6 +53,16 @@ button > a {
   color: #000;
 }
 
+.new-user > a {
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ccc;
+  box-shadow: 0 10px 10px #1c1c1c1c;
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
 .user_card_detail > h2 > a {
   font-size: 30px;
   padding-left: 15px;
@@ -300,4 +310,53 @@ button:hover {
 
 .comment_input {
   width: 200%;
+}
+
+.sign_out_button {
+  text-align: right;
+  margin-right: 25px;
+}
+
+.sign_out_button > button {
+  width: 120px;
+}
+
+.user_holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #504d4d;
+  border-radius: 1rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 450px;
+  margin-top: 20px;
+  padding-right: 15%;
+  padding-bottom: 20px;
+}
+
+.new-user {
+  align-self: flex-end;
+}
+
+.user_holder > h2 {
+  font-size: 25px;
+  padding-left: 20%;
+}
+
+.user_input {
+  width: 300px;
+  min-height: 25px;
+  margin-left: 150px;
+}
+
+.user_field {
+  margin-left: 150px;
+}
+
+.user_setting {
+  margin-top: 20px;
+  text-align: center;
+  padding-left: 20%;
 }
