@@ -9,7 +9,7 @@ class Ability
     can :read, :all
     can :create, [Comment, Post]
 
-    if user.admin? 
+    if user.admin?
       can :manage, :all
     else
       can :destroy, Comment, author: user
@@ -17,7 +17,7 @@ class Ability
     end
     #   return unless user.present?
     #   can :read, :all
-     
+
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
