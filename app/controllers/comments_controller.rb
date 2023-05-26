@@ -1,28 +1,34 @@
 class CommentsController < ApplicationController
-  load_and_authorize_resource
   def new
-    @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:post_id])
+    @comment = Comment.new
+    @post = Post.find(params[:post_id])
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @post = Post.find(params[:post_id])
+    @comment = current_user.comments.new(comment_params)
+    @comment.post_id = params[:post_id]
 
-    @comment = @post.comments.new(comment_params)
-    @comment.author = @user
     if @comment.save
-      redirect_to request.referrer
-
+      redirect_to user_posts_path
     else
-      render :new
+      render :create
     end
   end
 
   def destroy
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
-    @comment.destroy
-    redirect_to request.referrer
+    authorize! :destroy, @comment
+
+    puts 'Authorization successful'
+
+    if @comment.destroy
+      flash[:success] = 'Comment deleted successfully.'
+    else
+      flash[:danger] = 'Comment could not be deleted.'
+    end
+
+    redirect_to user_posts_path(@post.author, @post)
   end
 
   private
