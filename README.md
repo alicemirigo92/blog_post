@@ -93,7 +93,7 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤**Chukwuemeka Ochuba**
+👤**Alice Mirigo**
 
 - GitHub: [Alice Mirigo](https://github.com/alicemirigo92)
 - Twitter: [@Gathonimirigo](https://twitter.com/GathoniMirigo)
